@@ -50,12 +50,12 @@ pdf-ai-extractor input.pdf --output result.json
 ## Example
 
 ```bash
-% wget https://github.com/datawhalechina/leedl-tutorial/releases/download/v1.2.2/LeeDL_Tutorial_v.1.2.2.pdf -O ~/Downloads/LeeDL_Tutorial.pdf
+% wget https://github.com/datawhalechina/leedl-tutorial/releases/download/v1.2.2/LeeDL_Tutorial_v.1.2.2.pdf -O /tmp/LeeDL_Tutorial.pdf
 
-% pdf-ai-extractor -b openai -k 'sk-XXXXXXX' ~/Downloads/LeeDL_Tutorial.pdf    
+% pdf-ai-extractor -b openai -k 'sk-XXXXXXX' /tmp/LeeDL_Tutorial.pdf    
 [
   {
-    "path": "/path/Downloads/LeeDL_Tutorial.pdf",
+    "path": "/tmp/LeeDL_Tutorial.pdf",
     "abstract": "The 'LeeDL Tutorial' authored by Wang Qi, Yang Yiyuan, and Jiang Ji is a comprehensive guide to deep learning, inspired by the popular machine learning course by Professor Li Hongyi from National Taiwan University. This tutorial aims to make deep learning accessible to Chinese-speaking students by simplifying complex theories and providing detailed derivations of formulas. It covers essential topics in deep learning, including foundational concepts, practical methodologies, and advanced techniques, while integrating original content and supplementary materials from previous courses. The tutorial is designed for beginners and those seeking to deepen their understanding of deep learning, making it a recommended resource for students interested in the field. The authors, who are members of the Datawhale organization, have backgrounds in artificial intelligence, reinforcement learning, and computer vision, further enhancing the tutorial's credibility and depth.",
     "keywords": [
       "深度学习",
@@ -250,10 +250,10 @@ pdf-ai-extractor input.pdf --output result.json
   }
 ]
 
-% pdf-ai-extractor -b xai -k 'xai-XXXXX' ~/Downloads/LeeDL_Tutorial.pdf 
+% pdf-ai-extractor -b xai -k 'xai-XXXXX' /tmp/LeeDL_Tutorial.pdf 
 [
   {
-    "path": "/path/Downloads/LeeDL_Tutorial.pdf",
+    "path": "/tmp/LeeDL_Tutorial.pdf",
     "abstract": "本教程基于李宏毅教授的《机器学习》（2021年春）课程，旨在为深度学习初学者提供一个轻松入门的中文学习资源。教程内容全面，涵盖了深度学习的基本理论和实践方法，通过幽默风趣的讲解和大量动漫相关的例子，使深奥的理论变得易于理解。教程不仅选取了课程的精华内容，还对公式进行了详细推导，对难点进行了重点讲解，并补充了其他深度学习相关知识。",
     "keywords": [
       "深度学习",
@@ -282,34 +282,15 @@ pdf-ai-extractor input.pdf --output result.json
 ]
 
 
-% pdf-ai-extractor -b xai -k 'xai-XXXXX' ~/Downloads/LeeDL_Tutorial.pdf
+% pdf-ai-extractor -b huggingface /tmp/LeeDL_Tutorial.pdf
 [
   {
-    "path": "/path/Downloads/LeeDL_Tutorial.pdf",
-    "abstract": "This tutorial, based on Professor Li Hongyi's 'Machine Learning' course from NTU, offers an accessible introduction to deep learning. It simplifies complex theories through engaging examples, making it suitable for beginners. The tutorial covers essential deep learning concepts, optimization techniques, and practical methodologies, supplemented with original content to enhance understanding. It also includes contributions from other courses and additional knowledge to enrich the learning experience.",
-    "keywords": [
-      "深度学习",
-      "机器学习",
-      "李宏毅",
-      "教程",
-      "优化",
-      "强化学习",
-      "计算机视觉",
-      "时间序列",
-      "数据挖掘",
-      "智能传感系统"
-    ],
+    "path": "/tmp/LeeDL_Tutorial.pdf",
+    "abstract": "LeeDL Tutorialhttps://github.com/datawhalechina/leedl-tutorial.html is a free, open-source version of the popular LeeDL tutorial. The tutorial is broken up into two parts: 1.2.2 and 2.3.",
+    "keywords": [],
     "bookmarks": [
       "机器学习基础",
       "案例学习",
-      "线性模型",
-      "分段线性曲线",
-      "模型变形",
-      "机器学习框架",
-      "实践方法论",
-      "模型偏差",
-      "优化问题",
-      "过拟合",
       ...
       "术语"
     ],
